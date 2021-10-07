@@ -1,0 +1,17 @@
+<ag-grid-angular
+  style="width: 100vw; height: 100vh;"
+  class="ag-theme-alpine"
+  [columnDefs]="columnDefs"
+  [frameworkComponents]="frameworkComponents"
+  [statusBar]="statusBar"
+  [rowData]="(rowData$ | async) ?? []"
+  [defaultColDef]="defaultColDef"
+  [rowSelection]="'multiple'"
+  [rowMultiSelectWithClick]="true"
+  [getContextMenuItems]="getContextMenuItems"
+  [rowHeight]="70"
+  [suppressRowClickSelection]="(selectionType$ | async) ?? true"
+  (firstDataRendered)="onFirstDataRendered($event)"
+  (gridReady)="onGridReady($event)"
+>
+</ag-grid-angular>
